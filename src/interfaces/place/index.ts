@@ -17,5 +17,5 @@ export interface IPlaceUpdateRequest {
 }
 
 export interface IPlaceDistancetoResponse {
-  distance: string;
+  distance: number;
 }

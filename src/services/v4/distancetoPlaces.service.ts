@@ -29,5 +29,5 @@ export const distancetoPlaceService = async (
 
   const distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
 
-  return { distance: String(distance) };
+  return { distance: distance };
 };
