@@ -1,6 +1,7 @@
 import { AppError } from "../../error/appError.error";
 import { IPlace } from "../../interfaces/place";
-import { retrievePlaceSchema } from "../../schemas/user/userCreateRequest.schema";
+import { retrievePlaceSchema } from "../../schemas/place/retrievePlace.schema";
+
 import { placeRepo } from "../../utils/repositories";
 
 export const retrievePlaceService = async (

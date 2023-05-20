@@ -1,9 +1,9 @@
 import * as yup from "yup";
-import { IPlace } from "../../interfaces/place";
+import { IUserRequest } from "../../interfaces/user";
 
-export const retrievePlaceSchema: yup.SchemaOf<IPlace> = yup.object().shape({
-  id: yup.string().required(),
-  name: yup.string().required(),
-  latitude: yup.string().required(),
-  longitude: yup.string().required(),
-});
+export const userCreateRequestSchema: yup.SchemaOf<IUserRequest> = yup
+  .object()
+  .shape({
+    email: yup.string().required(),
+    password: yup.string().required(),
+  });

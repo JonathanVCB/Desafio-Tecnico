@@ -1,11 +1,12 @@
 import "reflect-metadata";
 import "dotenv/config";
 import { DataSourceOptions, DataSource } from "typeorm";
-import { User } from "./entities";
+import { User, Place } from "./entities";
+import { initial1684597421370 } from "./migrations/1684597421370-initial";
 
 const DataSourceSettings = (): DataSourceOptions => {
-  const entities = [User];
-  const migrations = [];
+  const entities = [User, Place];
+  const migrations = [initial1684597421370];
 
   const node_env = process.env.NODE_ENV;
 

@@ -16,23 +16,13 @@ export const createUserService = async (
     throw new AppError("E-mail already registered", 409);
   }
 
-  const { password, email } = userData;
-
-  const newUser = userRepo.create({
-    email,
-    password,
-  });
+  const newUser = userRepo.create(userData);
 
   await userRepo.save(newUser);
 
-  const userWithoutPassword = await userCreateResponseSchema.validate(
-    {
-      newUser,
-    },
-    {
-      stripUnknown: true,
-    }
-  );
+  const userWithoutPassword = await userCreateResponseSchema.validate(newUser, {
+    stripUnknown: true,
+  });
 
   return userWithoutPassword;
 };
