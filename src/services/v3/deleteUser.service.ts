@@ -10,5 +10,5 @@ export const deleteUserService = async (placeId: string) => {
 
   await placeRepo.delete({ id: placeId });
 
-  return {};
+  return { message: "Lugar removido com sucesso!" };
 };

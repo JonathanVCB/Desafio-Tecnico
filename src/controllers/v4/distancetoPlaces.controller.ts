@@ -1,7 +1,10 @@
 import { Request, Response } from "express";
 import { distancetoPlaceService } from "../../services/v4/distancetoPlaces.service";
 
-export const createPlaceController = async (req: Request, res: Response) => {
+export const distancetoPlacesController = async (
+  req: Request,
+  res: Response
+) => {
   const distancetoPlace = await distancetoPlaceService(
     req.params.id1,
     req.params.id2
