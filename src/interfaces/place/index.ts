@@ -15,3 +15,7 @@ export interface IPlaceUpdateRequest {
   latitude?: string;
   longitude?: string;
 }
+
+export interface IPlaceDistancetoResponse {
+  distance: string;
+}
