@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { deleteUserService } from "../../services/v3/deleteUser.service";
+import { deletePlaceService } from "../../services/v3/deletePlace.service";
 
 export const deletePlaceController = async (req: Request, res: Response) => {
-  const placeUpdated = await deleteUserService(req.params.id);
+  const placeUpdated = await deletePlaceService(req.params.id);
   return res.status(200).json(placeUpdated);
 };

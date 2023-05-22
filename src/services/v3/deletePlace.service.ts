@@ -1,7 +1,7 @@
 import { AppError } from "../../error/appError.error";
 import { placeRepo } from "../../utils/repositories";
 
-export const deleteUserService = async (placeId: string) => {
+export const deletePlaceService = async (placeId: string) => {
   const placeFound = await placeRepo.findOneBy({ id: placeId });
 
   if (!placeFound) {

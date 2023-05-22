@@ -2,7 +2,7 @@ import { AppError } from "../../error/appError.error";
 import { IPlaceUpdateRequest } from "../../interfaces/place";
 import { placeRepo } from "../../utils/repositories";
 
-export const updateUserService = async (
+export const updatePlaceService = async (
   placeId: string,
   placeData: IPlaceUpdateRequest
 ): Promise<IPlaceUpdateRequest> => {
