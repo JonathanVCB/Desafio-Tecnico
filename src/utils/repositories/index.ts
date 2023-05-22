@@ -1,9 +1,9 @@
 import appDataSource from "../../data-source";
-import { Point, User } from "../../entities";
-import { Place } from "../../entities/places.entity";
+import { Point, Polygon, User, Place } from "../../entities";
 
 const userRepo = appDataSource.getRepository(User);
 const placeRepo = appDataSource.getRepository(Place);
 const pointRepo = appDataSource.getRepository(Point);
+const polygonRepo = appDataSource.getRepository(Polygon);
 
-export { userRepo, placeRepo, pointRepo };
+export { userRepo, placeRepo, pointRepo, polygonRepo };

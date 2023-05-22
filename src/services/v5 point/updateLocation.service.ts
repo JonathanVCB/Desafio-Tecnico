@@ -10,7 +10,7 @@ export const updateLocationService = async (
   });
 
   if (!locationFound) {
-    throw new AppError("User not found!", 404);
+    throw new AppError("Location not found!", 404);
   }
 
   const updatedLocation = pointRepo.create({
