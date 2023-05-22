@@ -4,10 +4,15 @@ import { DataSourceOptions, DataSource } from "typeorm";
 import { User, Place, Point, Polygon } from "./entities";
 import { initial1684597421370 } from "./migrations/1684597421370-initial";
 import { addgeojson1684715611417 } from "./migrations/1684715611417-addgeojson";
+import { addpolygons1684771343276 } from "./migrations/1684771343276-addpolygons";
 
 const DataSourceSettings = (): DataSourceOptions => {
   const entities = [User, Place, Point, Polygon];
-  const migrations = [initial1684597421370, addgeojson1684715611417];
+  const migrations = [
+    initial1684597421370,
+    addgeojson1684715611417,
+    addpolygons1684771343276,
+  ];
 
   const node_env = process.env.NODE_ENV;
 
