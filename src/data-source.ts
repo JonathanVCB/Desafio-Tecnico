@@ -1,12 +1,13 @@
 import "reflect-metadata";
 import "dotenv/config";
 import { DataSourceOptions, DataSource } from "typeorm";
-import { User, Place } from "./entities";
+import { User, Place, Point } from "./entities";
 import { initial1684597421370 } from "./migrations/1684597421370-initial";
+import { addgeojson1684715611417 } from "./migrations/1684715611417-addgeojson";
 
 const DataSourceSettings = (): DataSourceOptions => {
-  const entities = [User, Place];
-  const migrations = [initial1684597421370];
+  const entities = [User, Place, Point];
+  const migrations = [initial1684597421370, addgeojson1684715611417];
 
   const node_env = process.env.NODE_ENV;
 
