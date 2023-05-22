@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { createLocationController } from "../controllers/v5/createLocation.controller";
-import { retrieveLocationController } from "../controllers/v5/retrieveLocation.controller";
-import { listLocationsController } from "../controllers/v5/listLocations.controller";
-import { updateLocationController } from "../controllers/v5/updateLocation.controller";
-import { deleteLocationController } from "../controllers/v5/deleteLocation.controller";
+import { createLocationController } from "../controllers/v5 point/createLocation.controller";
+import { retrieveLocationController } from "../controllers/v5 point/retrieveLocation.controller";
+import { listLocationsController } from "../controllers/v5 point/listLocations.controller";
+import { updateLocationController } from "../controllers/v5 point/updateLocation.controller";
+import { deleteLocationController } from "../controllers/v5 point/deleteLocation.controller";
 
 const v5Routes = Router();
 
