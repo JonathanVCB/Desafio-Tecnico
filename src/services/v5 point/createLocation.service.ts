@@ -4,7 +4,6 @@ import { pointRepo } from "../../utils/repositories";
 export const createLocationService = async (
   locationData: any
 ): Promise<any> => {
-  console.log(locationData);
   const location = await pointRepo.findOneBy({ name: locationData.name });
 
   if (location) {
