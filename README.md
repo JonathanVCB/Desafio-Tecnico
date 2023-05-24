@@ -58,6 +58,13 @@ yarn typeorm migration:run -d src/data-source
 
 ---
 
+Pronto, deu tudo certo? basta inicializar o servidor com o seguinte comando:
+```
+yarn dev
+```
+
+---
+
 ## :bullettrain_side: Rotas
 
 ### :boy: Rotas de criação deUsuário
